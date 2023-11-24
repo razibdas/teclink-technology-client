@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className="mt-10">
             <div className="footer p-10 bg-base-200 text-base-content">
                 <aside className="mt-16 text-3xl text-orange-400">
                     TECLINK

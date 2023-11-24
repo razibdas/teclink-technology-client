@@ -15,7 +15,7 @@ const Banner = () => {
 
     return (
         <div>
-            <motion.div 
+            <motion.div
                 animate={{
                     scale: [1, 2, 2, 1, 1],
                     rotate: [0, 0, 270, 270, 0],
@@ -23,11 +23,11 @@ const Banner = () => {
                 }}
             >
 
-                <Swiper 
-                     style={{
+                <Swiper
+                    style={{
                         '--swiper-navigation-color': '#fff',
                         '--swiper-pagination-color': '#fff',
-                        height: '500px', 
+                        height: '500px',
                     }}
                     spaceBetween={10}
                     navigation={true}
@@ -52,10 +52,18 @@ const Banner = () => {
                     <SwiperSlide>
                         <img className='w-full' src="https://i.ibb.co/YdszZ8j/jason-blackeye-XYrjl3j7smo-unsplash.jpg" />
                     </SwiperSlide>
-                    
+
                 </Swiper>
 
             </motion.div >
+            
+            <div className='absolute flex -mt-72 lg:ml-24   justify-center z-10  text-container'>
+                <p className='lg:text-4xl sm:text-2xl text-center text-red-600' >
+                    Experience innovation like never before. Our commitment to<br></br>
+                    excellence drives us to explore new possibilities<br></br>
+                    and redefine the future
+                </p>
+            </div>
         </div>
     );
 };
