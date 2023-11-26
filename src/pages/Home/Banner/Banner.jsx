@@ -35,7 +35,7 @@ const Banner = () => {
                     className="mySwiper2"
                 >
                     <SwiperSlide>
-                        <img className='w-full ' src="https://i.ibb.co/vwHWZtW/alex-knight-2-EJCSULRw-C8-unsplash.jpg" />
+                        <img className='w-full ' src="https://i.ibb.co/bBKSngF/domenico-loia-Eh-Tc-C9s-YXsw-unsplash.jpg" />
                     </SwiperSlide>
                     <SwiperSlide>
                         <img className='w-full' src="https://i.ibb.co/C6p1vqN/surface-ZFv-SWK4-L28-unsplash.jpg" />
@@ -44,7 +44,7 @@ const Banner = () => {
                         <img className='w-full' src="https://i.ibb.co/w0Nxj8L/alex-kotliarskyi-our-QHRTE2-IM-unsplash.jpg" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img className='w-full' src="https://i.ibb.co/bBKSngF/domenico-loia-Eh-Tc-C9s-YXsw-unsplash.jpg" />
+                        <img className='w-full' src="https://i.ibb.co/vwHWZtW/alex-knight-2-EJCSULRw-C8-unsplash.jpg" />
                     </SwiperSlide>
                     <SwiperSlide>
                         <img className='w-full' src="https://i.ibb.co/pJL7ptk/firmbee-com-Df-MMzzi3rmg-unsplash.jpg" />
@@ -54,7 +54,7 @@ const Banner = () => {
                     </SwiperSlide>
 
                 </Swiper>
-
+                
             </motion.div >
             
             <div className='absolute flex -mt-72 lg:ml-24   justify-center z-10  text-container'>

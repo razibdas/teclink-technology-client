@@ -7,6 +7,7 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../pages/Secret/Secret";
+import Features from "../pages/Home/Features/Features";
 
 
   export const router = createBrowserRouter([
@@ -16,7 +17,9 @@ import Secret from "../pages/Secret/Secret";
       children: [
         {
             path: '/',
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: ({params}) => fetch('http://localhost:5000/feature')
+            
         },
         {
           path: '/login',
