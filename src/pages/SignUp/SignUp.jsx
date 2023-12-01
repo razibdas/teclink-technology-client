@@ -37,7 +37,7 @@ const SignUp = () => {
 
     return (
         <>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200 ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className=" w-1/2 mr-12 ">
                         <img className='lg:w-[500px] lg:h-[400px]' src="https://i.ibb.co/2FT7ngC/12892962-5098293.jpg" alt="" />

@@ -120,8 +120,9 @@ const Navbar = () => {
 
     const navOpitons = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/menu">Our Menu</Link></li>
-        <li><Link to="/order/salad">Order Food</Link></li>
+        <li><Link to="/menu">Products</Link></li>
+        <li><Link to="/trending">Trending</Link></li>
+        <li><Link to="">Add Products</Link></li>
         {/* {
             user && isAdmin && <li><Link to="/dashboard/adminHome">Dashboard</Link></li>
         }
@@ -157,7 +158,7 @@ const Navbar = () => {
                             {navOpitons}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">Bistro Boss</a>
+                    <a className="btn btn-ghost normal-case text-xl">TECLINK</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -198,6 +199,7 @@ const Navbar = () => {
                                             <button onClick={handleLogOut} className=" text-primary px-2 pt-2">
                                                 Sign Out
                                             </button>
+                                            <button>Dashboard</button>
                                         </>
 
                                     </div>
