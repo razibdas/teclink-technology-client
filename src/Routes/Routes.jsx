@@ -11,6 +11,8 @@ import TrendingProducts from "../pages/Home/TrendingProducts/TrendingProducts";
 import Trends from "../pages/Trends/Trends";
 import ProductDetail from "../pages/ProductDetail/ProductDetail";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import AddProduct from "../pages/AddProduct/AddProduct";
+import Dashboard from "../layout/Dashboard";
 
 
   export const router = createBrowserRouter([
@@ -48,9 +50,23 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
           element: <PrivateRoute><Secret></Secret></PrivateRoute>
         },
         {
-          path: '/details',
-          element: <ProductDetail></ProductDetail>
+          path: '/feature/:id',
+          element: <PrivateRoute><ProductDetail></ProductDetail></PrivateRoute>,
+          loader: ({params}) => fetch(`http://localhost:5000/feature/${params.id}`)
+        },
+        {
+          path: '/addProduct',
+          element: <AddProduct></AddProduct>
         }
       ]
     },
+    {
+      path: 'dashboard',
+      element: <Dashboard></Dashboard>,
+      children: [
+        {
+          path: 'cart'
+        }
+      ]
+    }
   ]);
