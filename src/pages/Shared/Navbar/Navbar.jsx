@@ -7,12 +7,13 @@ import { FaShoppingCart } from "react-icons/fa";
 
 // import useAdmin from "../../../../hooks/useAdmin";
 import { AuthContext } from "../../../provider/AuthProvider";
+import useCart from "../../../Hooks/useCart";
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
     const [showDisplayName, setShowDisplayName] = useState(false);
-    // const [cart] = useCart();
+    const [cart] = useCart();
     // const [isAdmin] = useAdmin();
 
     const handleLogOut = () => {
@@ -23,15 +24,15 @@ const Navbar = () => {
 
     const navOpitons = <div className="flex items-center">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/menu">Products</Link></li>
+        <li><Link to="/trends">Products</Link></li>
         <li><Link to="/trending">Trending</Link></li>
         {/* <li><Link to="/addProduct">Add Products</Link></li> */}
         <li><Link to="/adi">My Products</Link></li>
         <li>
-            <Link to="/">
+            <Link to="/dashboard/cart">
                 <button className="btn">
                     <FaShoppingCart></FaShoppingCart>
-                    <div className="badge badge-secondary">+0</div>
+                    <div className="badge badge-secondary">+{cart.length}</div>
                 </button>
             </Link>
         </li>

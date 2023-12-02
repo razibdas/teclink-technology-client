@@ -13,6 +13,7 @@ import ProductDetail from "../pages/ProductDetail/ProductDetail";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import AddProduct from "../pages/AddProduct/AddProduct";
 import Dashboard from "../layout/Dashboard";
+import Cart from "../pages/Dashboard/Cart/Cart";
 
 
   export const router = createBrowserRouter([
@@ -65,7 +66,8 @@ import Dashboard from "../layout/Dashboard";
       element: <Dashboard></Dashboard>,
       children: [
         {
-          path: 'cart'
+          path: 'cart',
+          element: <Cart></Cart>
         }
       ]
     }
