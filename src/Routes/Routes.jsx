@@ -9,12 +9,15 @@ import PrivateRoute from "./PrivateRoute";
 import Secret from "../pages/Secret/Secret";
 import TrendingProducts from "../pages/Home/TrendingProducts/TrendingProducts";
 import Trends from "../pages/Trends/Trends";
+import ProductDetail from "../pages/ProductDetail/ProductDetail";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
   export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',
@@ -43,6 +46,10 @@ import Trends from "../pages/Trends/Trends";
         {
           path: '/secret',
           element: <PrivateRoute><Secret></Secret></PrivateRoute>
+        },
+        {
+          path: '/details',
+          element: <ProductDetail></ProductDetail>
         }
       ]
     },
