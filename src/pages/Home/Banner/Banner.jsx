@@ -14,7 +14,7 @@ const Banner = () => {
 
 
     return (
-        <div>
+        <div className=' bg-black/75'>
             <motion.div
                 animate={{
                     scale: [1, 2, 2, 1, 1],

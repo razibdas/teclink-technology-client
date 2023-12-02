@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import TrendingCard from "./TrendingCard";
 import Banners from "../Banner/Banners";
 
@@ -16,6 +16,9 @@ const TrendingProducts = () => {
                         trendings.map(trending => <TrendingCard key={trending.id} trending={trending}></TrendingCard>)
                     }
                 </div>
+            </div>
+            <div className="text-center mt-10">
+               <Link to="/trends"> <button className="btn btn-primary">Show All</button></Link>
             </div>
         </div>
     );

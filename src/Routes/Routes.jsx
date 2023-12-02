@@ -7,8 +7,8 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../pages/Secret/Secret";
-import Features from "../pages/Home/Features/Features";
 import TrendingProducts from "../pages/Home/TrendingProducts/TrendingProducts";
+import Trends from "../pages/Trends/Trends";
 
 
   export const router = createBrowserRouter([
@@ -26,6 +26,11 @@ import TrendingProducts from "../pages/Home/TrendingProducts/TrendingProducts";
           path: '/trending',
           element: <TrendingProducts></TrendingProducts>,
           loader: ({params}) => fetch('http://localhost:5000/trending')
+        },
+        {
+          path: '/trends',
+          element: <Trends></Trends>,
+          loader: ({params}) => fetch('http://localhost:5000/trendss')
         },
         {
           path: '/login',
