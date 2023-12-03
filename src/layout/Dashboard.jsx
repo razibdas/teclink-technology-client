@@ -20,7 +20,7 @@ const Dashboard = () => {
                                 <NavLink to="/dashboard/userProfile"> <CgProfile />Statistics Page</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/cart"> <FaShoppingCart></FaShoppingCart>Manage Users</NavLink>
+                                <NavLink to="/dashboard/users"> <FaShoppingCart></FaShoppingCart>Manage Users</NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/addProduct"> <FaCartArrowDown />Manage Coupons</NavLink>
