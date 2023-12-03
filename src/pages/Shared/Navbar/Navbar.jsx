@@ -27,7 +27,6 @@ const Navbar = () => {
         <li><Link to="/trends">Products</Link></li>
         <li><Link to="/trending">Trending</Link></li>
         {/* <li><Link to="/addProduct">Add Products</Link></li> */}
-        <li><Link to="/adi">My Products</Link></li>
         <li>
             <Link to="/dashboard/cart">
                 <button className="btn">
@@ -98,7 +97,7 @@ const Navbar = () => {
                                             <button onClick={handleLogOut} className=" text-primary px-2 pt-2">
                                                 Sign Out
                                             </button>
-                                            <button>Dashboard</button>
+                                           <Link  to="/dashboard/cart"> <button>Dashboard</button></Link>
                                         </>
 
                                     </div>

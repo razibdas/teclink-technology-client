@@ -1,7 +1,66 @@
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { useLocation, useNavigate } from "react-router-dom";
+import useCart from "../../Hooks/useCart";
+import Swal from "sweetalert2";
 
 
 const Trenders = ({ trend }) => {
-    const { name, image, price } = trend;
+    const { _id, name, image, price } = trend;
+    const { user } = useContext(AuthContext);
+    const axiosSecure = useAxiosSecure();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [, refetch] = useCart();
+
+
+    const handleAddToCart = () => {
+        if (user && user.email) {
+            const cartItem = {
+                menuId: _id,
+                email: user.email,
+                name,
+                image,
+                price
+            }
+            axiosSecure.post('/carts', cartItem)
+                .then(res => {
+                    console.log(res.data);
+                    if (res.data.insertedId) {
+                        Swal.fire({
+                            position: "center",
+                            icon: "success",
+                            title: `${name} added to your cart`,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        refetch()
+                    }
+                })
+        }
+        else {
+            Swal.fire({
+                title: "You are not logged In",
+                text: "Please login to add to the cart?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, login!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Swal.fire({
+                    //     title: "deleted",
+                    //     text: 'your file has been deleted',
+                    //     icon: 'success'
+                    // })
+                    navigate('/login', { state: { from: location } })
+                }
+            });
+        }
+    }
+
     return (
         <div>
             <div className="card card-compact  bg-base-100 shadow-xl">
@@ -12,8 +71,9 @@ const Trenders = ({ trend }) => {
                     <div>
                         <button className="btn btn-outline btn-accent">Upvote</button>
                     </div>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-secondary w-full">Add Product</button>
+                    <div className="card-actions w-full">
+                        <button onClick={() => handleAddToCart(trend)}
+                            className="btn btn-secondary w-full">Add Product</button>
                     </div>
                 </div>
             </div>

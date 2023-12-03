@@ -15,7 +15,7 @@ const Dashboard = () => {
                         <NavLink to="/dashboard/cart"> <FaShoppingCart></FaShoppingCart>My Product</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/dashboard/addProducts"> <FaCartArrowDown />Add Products</NavLink>
+                        <NavLink to="/dashboard/addProduct"> <FaCartArrowDown />Add Products</NavLink>
                     </li>
                     <div className="divider"></div>
                     <li>
