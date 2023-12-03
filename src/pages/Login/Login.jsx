@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 import { AuthContext } from '../../provider/AuthProvider';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
 const Login = () => {
 
@@ -14,6 +15,7 @@ const Login = () => {
     const { signIn, googleSignIn  } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    const axiosPublic = useAxiosPublic();
 
     const from = location.state?.from?.pathname || "/";
 
@@ -43,14 +45,19 @@ const Login = () => {
     }
 
     const handleGoogleSignIn = () => {
-        // Assuming googleSignIn is defined elsewhere
         googleSignIn()
-            .then((user) => {
-                console.log(user);
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+           .then(result =>{
+                console.log(result.user);
+                const userInfo = {
+                    email: result.user?.email,
+                    name: result.user?.displayName
+                }
+                axiosPublic.post('/users', userInfo)
+                    .then(res => {
+                        console.log(res.data);
+                        navigate('/')
+                    })
+           })
     };
 
         return (

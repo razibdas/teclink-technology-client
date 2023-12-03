@@ -79,9 +79,9 @@ const Navbar = () => {
                                             className="w-10 rounded-full"
                                             src={user?.photoURL}
                                             alt="User Profile"
-                                            onError={(e) => {
-                                                e.target.src = defaultUserPhoto;
-                                            }}
+                                            // onError={(e) => {
+                                            //     e.target.src = defaultUserPhoto;
+                                            // }}
                                         />
                                     </div>
                                 </label>
