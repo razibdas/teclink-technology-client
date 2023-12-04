@@ -15,6 +15,9 @@ import AddProduct from "../pages/AddProduct/AddProduct";
 import Dashboard from "../layout/Dashboard";
 import Cart from "../pages/Dashboard/Cart/Cart";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
+import AdminRoute from "./AdminRoute";
+import UpdateProduct from "../pages/Dashboard/UpdateProduct/UpdateProduct";
+import Payment from "../pages/Dashboard/Payment/Payment";
 
 
   export const router = createBrowserRouter([
@@ -26,18 +29,18 @@ import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
         {
             path: '/',
             element: <Home></Home>,
-            loader: ({params}) => fetch('http://localhost:5000/feature')
+            loader: ({params}) => fetch('https://teclink-technology-server.vercel.app/feature')
             
         },
         {
           path: '/trending',
           element: <TrendingProducts></TrendingProducts>,
-          loader: ({params}) => fetch('http://localhost:5000/trending')
+          loader: ({params}) => fetch('https://teclink-technology-server.vercel.app/trending')
         },
         {
           path: '/trends',
           element: <Trends></Trends>,
-          loader: ({params}) => fetch('http://localhost:5000/trendss')
+          loader: ({params}) => fetch('https://teclink-technology-server.vercel.app/trendss')
         },
         {
           path: '/login',
@@ -54,12 +57,9 @@ import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
         {
           path: '/feature/:id',
           element: <PrivateRoute><ProductDetail></ProductDetail></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/feature/${params.id}`)
+          loader: ({params}) => fetch(`https://teclink-technology-server.vercel.app/feature/${params.id}`)
         },
-        {
-          path: '/addProduct',
-          element: <AddProduct></AddProduct>
-        }
+       
       ]
     },
     {
@@ -70,12 +70,26 @@ import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
           path: 'cart',
           element: <Cart></Cart>
         },
+        {
+          path: 'addProduct',
+          element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+        },
+        {
+          path: 'updateProduct/:id',
+          element: <UpdateProduct></UpdateProduct>,
+          loader: ({params}) => fetch(`https://teclink-technology-server.vercel.app/carts/${params.id}`)
+        },
+        {
+          path: 'payment',
+          element: <Payment></Payment>
+        },
 
         // admin routes
         {
           path: 'users',
-          element: <AllUsers></AllUsers>
-        }
+          element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+        },
+       
       ]
     }
   ]);
