@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import Features from "../Features/Features";
+import Element from "../../Element/Element";
 
 
 
@@ -17,6 +18,7 @@ const Home = () => {
                     featured.map(feature => <Features key={featured.id} feature={feature}></Features>)
                 }
             </div>
+            <Element></Element>
         </div>
     );
 };
