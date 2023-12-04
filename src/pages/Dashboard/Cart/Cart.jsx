@@ -40,7 +40,7 @@ const Cart = () => {
             <div className="flex justify-evenly mt-8">
                 <h2 className="text-4xl">Items: {cart.length}</h2>
                 <h2 className="text-4xl">Total Price: ${totalPrice.toFixed(2)}</h2>
-                <button className="btn btn-secondary">Pay</button>
+                <button className="btn btn-outline btn-secondary">Payment</button>
             </div>
             <div className="overflow-x-auto">
                 <table className="table">
