@@ -60,6 +60,23 @@ const AllUsers = () => {
         })
     }
 
+    const handleMakeModerator = user => {
+        axiosSecure.patch(`/users/moderator/${user._id}`)
+        .then(res => {
+            console.log(res.data);
+            if(res.data.modifiedCount > 0){
+                refetch();
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: `${user.name} is an Moderator Now!`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            }
+        })
+    }
+
     return (
         <div>
             <div className="flex justify-evenly py-4">
@@ -75,7 +92,8 @@ const AllUsers = () => {
                                 <th></th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Role</th>
+                                <th>Admin</th>
+                                <th>Moderator</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -87,6 +105,10 @@ const AllUsers = () => {
                                     <td>{user.email}</td>
                                     <td>
                                         {user.role === 'admin' ? 'Admin' : <button onClick={() => handleMakeAdmin(user)}
+                                            className="btn  btn-lg bg-orange-500 "><FaUsers className="text-white " /></button>}
+                                    </td>
+                                    <td>
+                                        {user.role === 'moderator' ? 'Moderator' : <button onClick={() => handleMakeModerator(user)}
                                             className="btn  btn-lg bg-orange-500 "><FaUsers className="text-white " /></button>}
                                     </td>
                                     <td>

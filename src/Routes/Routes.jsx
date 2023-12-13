@@ -29,18 +29,18 @@ import Payment from "../pages/Dashboard/Payment/Payment";
         {
             path: '/',
             element: <Home></Home>,
-            loader: ({params}) => fetch('https://teclink-technology-server.vercel.app/feature')
+            loader: ({params}) => fetch('http://localhost:5000/feature')
             
         },
         {
           path: '/trending',
           element: <TrendingProducts></TrendingProducts>,
-          loader: ({params}) => fetch('https://teclink-technology-server.vercel.app/trending')
+          loader: ({params}) => fetch('http://localhost:5000/trending')
         },
         {
           path: '/trends',
           element: <Trends></Trends>,
-          loader: ({params}) => fetch('https://teclink-technology-server.vercel.app/trendss')
+          loader: ({params}) => fetch('http://localhost:5000/trendss')
         },
         {
           path: '/login',
@@ -57,7 +57,7 @@ import Payment from "../pages/Dashboard/Payment/Payment";
         {
           path: '/feature/:id',
           element: <PrivateRoute><ProductDetail></ProductDetail></PrivateRoute>,
-          loader: ({params}) => fetch(`https://teclink-technology-server.vercel.app/feature/${params.id}`)
+          loader: ({params}) => fetch(`http://localhost:5000/feature/${params.id}`)
         },
        
       ]
@@ -77,7 +77,7 @@ import Payment from "../pages/Dashboard/Payment/Payment";
         {
           path: 'updateProduct/:id',
           element: <UpdateProduct></UpdateProduct>,
-          loader: ({params}) => fetch(`https://teclink-technology-server.vercel.app/carts/${params.id}`)
+          loader: ({params}) => fetch(`http://localhost:5000/carts/${params.id}`)
         },
         {
           path: 'payment',

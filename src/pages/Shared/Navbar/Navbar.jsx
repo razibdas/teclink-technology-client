@@ -2,7 +2,6 @@
 
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-
 import { FaShoppingCart } from "react-icons/fa";
 
 // import useAdmin from "../../../../hooks/useAdmin";
@@ -23,9 +22,9 @@ const Navbar = () => {
     }
 
     const navOpitons = <div className="flex items-center">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/trends">Products</Link></li>
-        <li><Link to="/trending">Trending</Link></li>
+        <li><Link to="/" className="">Home</Link></li>
+        <li><Link to="/trends" className="">Products</Link></li>
+        <li><Link to="/trending" className="">Trending</Link></li>
         {/* <li><Link to="/addProduct">Add Products</Link></li> */}
         <li>
             <Link to="/dashboard/cart">
@@ -46,7 +45,7 @@ const Navbar = () => {
     </div>
     return (
         <>
-            <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl  bg-black text-white">
+            <div className="navbar fixed z-10 bg-opacity-30   bg-black text-white">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">

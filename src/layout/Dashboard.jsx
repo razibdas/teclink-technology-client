@@ -1,15 +1,14 @@
 import { FaShoppingCart, FaCartArrowDown, FaHome } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
-import useCart from "../Hooks/useCart";
 import useAdmin from "../Hooks/useAdmin";
+import useModerator from "../Hooks/useModerator";
 
 
 const Dashboard = () => {
 
-    const [cart] = useCart();
-
     const [isAdmin] = useAdmin();
+    const [isModerator] = useModerator();
 
     return (
         <div className="flex">
@@ -27,18 +26,25 @@ const Dashboard = () => {
                                 <NavLink to="/dashboard/addProduct"> <FaCartArrowDown />Manage Coupons</NavLink>
                             </li>
                         </>
-                            :
-                            <>
+                            : isModerator ? <> <li>
+                                <NavLink to="/dashboard/userProfile"> <CgProfile />Product Review Queue</NavLink>
+                            </li>
                                 <li>
-                                    <NavLink to="/dashboard/userProfile"> <CgProfile />My Profile</NavLink>
+                                    <NavLink to="/dashboard/cart"> <FaShoppingCart></FaShoppingCart>Reported Contents</NavLink>
                                 </li>
-                                <li>
-                                    <NavLink to="/dashboard/cart"> <FaShoppingCart></FaShoppingCart>My Product</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/dashboard/addProduct"> <FaCartArrowDown />Add Products</NavLink>
-                                </li>
-                            </>
+                                
+                                </> :
+                                <>
+                                    <li>
+                                        <NavLink to="/dashboard/userProfile"> <CgProfile />My Profile</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/dashboard/cart"> <FaShoppingCart></FaShoppingCart>My Product</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/dashboard/addProduct"> <FaCartArrowDown />Add Products</NavLink>
+                                    </li>
+                                </>
                     }
                     <div className="divider"></div>
                     <li>

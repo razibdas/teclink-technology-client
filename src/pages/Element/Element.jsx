@@ -2,7 +2,7 @@
 
 const Element = () => {
     return (
-        <div className="bg-black mt-8 text-white p-12  lg:flex justify-evenly">
+        <div className="bg-black mt-8 lg:mx-96 text-white p-12  lg:flex justify-evenly">
             <div>
                 <h2 className="text-3xl">Elementor </h2>
                 <p className="mt-8">Build pages by drag-&-dropping elements & view changes on the fly. Elementor compatible.</p>

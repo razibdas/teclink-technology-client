@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import Features from "../Features/Features";
 import Element from "../../Element/Element";
+import Timeline from "../Timeline/Timeline";
 
 
 
@@ -12,13 +13,14 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <p className="flex justify-center mt-12 text-3xl font-bold">Feature</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 mx-16 mt-12">
+            <p className="flex justify-center  mt-12 text-3xl font-bold">Feature</p>
+            <div className="grid grid-cols-1 lg:mx-96 md:grid-cols-2 lg:grid-cols-3  gap-6  mt-12">
                 {
                     featured.map(feature => <Features key={featured.id} feature={feature}></Features>)
                 }
             </div>
             <Element></Element>
+            <Timeline></Timeline>
         </div>
     );
 };

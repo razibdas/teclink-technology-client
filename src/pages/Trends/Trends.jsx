@@ -17,7 +17,7 @@ const Trends = () => {
     return (
         <div>
             <Banners></Banners>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-16 mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:mx-96 mt-10">
                 {trendings.map(trend => (
                     <Trenders key={trend.id} trend={trend}></Trenders>
                 ))}

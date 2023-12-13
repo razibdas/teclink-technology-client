@@ -10,7 +10,7 @@ const Footer = () => {
                 </aside>
                 <nav>
                     <header className="footer-title">Social</header>
-                    <a className="link link-hover">Facebook</a>
+                    <a className="link link-hover" href="https://www.facebook.com">Facebook</a>
                     <a className="link link-hover"> Instagram</a>
                     <a className="link link-hover"> LinkedIn</a>
                     <a className="link link-hover">Twitter</a>

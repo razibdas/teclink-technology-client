@@ -10,6 +10,7 @@ const Cart = () => {
     const [cart, refetch] = useCart();
     const totalPrice = cart.reduce((total, item) => total + parseFloat(item.price), 0);
     const axiosSecure = useAxiosSecure();
+    
     const handleDelete = id => {
         Swal.fire({
             title: "Are you sure?",
