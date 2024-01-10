@@ -1,10 +1,4 @@
-// import { useContext } from "react";
-// import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { AuthContext } from "../../../provider/AuthProvider";
-// import Swal from "sweetalert2";
-// import useAxiosSecure from "../../../Hooks/useAxiosSecure";
-// import useCart from "../../../Hooks/useCart";
-// import './style.css'
+
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useContext, useState } from 'react';
@@ -16,12 +10,6 @@ import useCart from '../../../Hooks/useCart';
 import './style.css';
 
 const Features = ({ feature }) => {
-    // const { _id, name, image, price } = feature;
-    // const { user } = useContext(AuthContext);
-    // const axiosSecure = useAxiosSecure();
-    // const navigate = useNavigate();
-    // const location = useLocation();
-    // const [, refetch] = useCart();
 
     const { _id, name, image, price } = feature;
     const { user } = useContext(AuthContext);

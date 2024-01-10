@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const Timeline = () => {
     return (
@@ -50,4 +50,5 @@ const Timeline = () => {
     );
 };
 
-export default Timeline;
+export default Timeline;;
+

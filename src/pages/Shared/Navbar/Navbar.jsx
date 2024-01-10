@@ -1,18 +1,20 @@
 
 
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 
 // import useAdmin from "../../../../hooks/useAdmin";
 import { AuthContext } from "../../../provider/AuthProvider";
 import useCart from "../../../Hooks/useCart";
+import './Navbar.css'
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
     const [showDisplayName, setShowDisplayName] = useState(false);
     const [cart] = useCart();
+    const location = useLocation();
     // const [isAdmin] = useAdmin();
 
     const handleLogOut = () => {
@@ -22,9 +24,9 @@ const Navbar = () => {
     }
 
     const navOpitons = <div className="flex items-center">
-        <li><Link to="/" className="">Home</Link></li>
-        <li><Link to="/trends" className="">Products</Link></li>
-        <li><Link to="/trending" className="">Trending</Link></li>
+        <li><Link to="/" className={location.pathname=='/' ? 'btn-98' : ''}>Home</Link></li>
+        <li><Link to="/trends" className={location.pathname=='/trends' ? 'btn-98' : ''}>Products</Link></li>
+        <li><Link to="/trending" className={location.pathname=='/trending' ? 'btn-98' : ''}>Trending</Link></li>
         {/* <li><Link to="/addProduct">Add Products</Link></li> */}
         <li>
             <Link to="/dashboard/cart">
@@ -37,7 +39,7 @@ const Navbar = () => {
 
         {
             user ? <>
-                <button onClick={handleLogOut} className="">LogOut</button>
+                <button onClick={handleLogOut} className="btn-55">LogOut</button>
             </> : <>
                 <li><Link to="/login">Login</Link></li>
             </>
