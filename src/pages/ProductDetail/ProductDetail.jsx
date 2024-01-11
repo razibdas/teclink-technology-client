@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 const ProductDetail = () => {
     const { name, image, price } = useLoaderData();
+  
 
     return (
         <div className="pt-24 flex justify-center">
