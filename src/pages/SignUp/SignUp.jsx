@@ -51,11 +51,13 @@ const SignUp = () => {
             <div className="hero min-h-screen bg-base-200 ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className=" w-1/2 mr-12 ">
-                        <img className='lg:w-[500px] lg:h-[400px]' src="https://i.ibb.co/2FT7ngC/12892962-5098293.jpg" alt="" />
+                        <img className='lg:w-[500px] lg:h-[400px]' src="https://i.ibb.co/PDHScWs/register-img.gif" alt="" />
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-                            <div className="form-control">
+                        <h2 className="mx-auto text-3xl font-bold">Please SignUp</h2>
+                        <progress className="progress w-56 mt-2 mx-auto"></progress>
+                            <div className="form-control mt-4">
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
