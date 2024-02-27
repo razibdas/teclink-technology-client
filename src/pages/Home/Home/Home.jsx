@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <p className="flex justify-center  mt-12 text-3xl font-bold">Feature</p>
+            <p className="flex justify-center  mt-12 text-3xl font-bold text-white">Feature</p>
             <div className="grid grid-cols-1 lg:mx-96 md:grid-cols-2 lg:grid-cols-3  gap-6  mt-12">
                 {
                     featured.map(feature => <Features key={featured.id} feature={feature}></Features>)

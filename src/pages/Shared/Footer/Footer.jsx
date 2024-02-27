@@ -2,9 +2,9 @@
 
 const Footer = () => {
     return (
-        <footer className="mt-10">
-            <div className="footer p-10 bg-base-200 text-base-content">
-                <aside className="mt-16 text-3xl text-orange-400">
+        <footer className="mt-10 ">
+            <div className="footer text-white p-10 ">
+                <aside className="mt-16 text-3xl ">
                     TECLINK
 
                 </aside>
@@ -31,7 +31,7 @@ const Footer = () => {
                 </nav>
 
             </div>
-            <div className=" footer-center  p-4 bg-base-200 text-base-content">
+            <div className=" footer-center  p-4 text-base-content">
                 <aside>
                     <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
                 </aside>

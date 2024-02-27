@@ -27,7 +27,7 @@ const Navbar = () => {
         <li><Link to="/" className={location.pathname=='/' ? 'btn-98' : ''}>Home</Link></li>
         <li><Link to="/trends" className={location.pathname=='/trends' ? 'btn-98' : ''}>Products</Link></li>
         <li><Link to="/trending" className={location.pathname=='/trending' ? 'btn-98' : ''}>Trending</Link></li>
-        {/* <li><Link to="/addProduct">Add Products</Link></li> */}
+        <li><Link to="/map">Maps</Link></li>
         <li>
             <Link to="/dashboard/cart">
                 <button className="btn">

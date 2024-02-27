@@ -18,6 +18,8 @@ import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import AdminRoute from "./AdminRoute";
 import UpdateProduct from "../pages/Dashboard/UpdateProduct/UpdateProduct";
 import Payment from "../pages/Dashboard/Payment/Payment";
+import MyProfile from "../pages/Dashboard/MyProfile/MyProfile";
+import Map from "../pages/Map/Map";
 
 
   export const router = createBrowserRouter([
@@ -51,6 +53,10 @@ import Payment from "../pages/Dashboard/Payment/Payment";
           element: <SignUp></SignUp>
         },
         {
+          path: '/map',
+          element: <Map></Map>
+        },
+        {
           path: '/secret',
           element: <PrivateRoute><Secret></Secret></PrivateRoute>
         },
@@ -73,6 +79,10 @@ import Payment from "../pages/Dashboard/Payment/Payment";
         {
           path: 'addProduct',
           element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+        },
+        {
+          path: 'userProfile',
+          element: <MyProfile></MyProfile>
         },
         {
           path: 'updateProduct/:id',

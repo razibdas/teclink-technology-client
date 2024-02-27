@@ -1,0 +1,9 @@
+/* main.css */
+.main-container {
+    background-image: url('https://i.ibb.co/wBCSJQk/abstract-textured-backgound.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensures the background covers the full screen height */
+    /* You can add more styles as needed */
+  }
+  
