@@ -48,44 +48,50 @@ const AddProduct = () => {
 
     return (
         <div className="pt-24">
-            <h2 className="text-2xl text-center">Add An Product</h2>
-            <div className="w-1/2 justify-center p-8 mx-auto bg-orange-300 mt-6">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className="flex">
-                        <div className="form-control w-full my-6">
-                            <label className="label">
-                                <span className="label-text"> Name*</span>
-                            </label>
-                            <input type="text" placeholder="Name"
-                                {...register('name', { required: true })} className="input input-bordered w-full" />
+
+            <div className="">
+            <h2 className="text-3xl mx-auto flex justify-center">Add An Product</h2>
+                <div className="flex justify-center  mx-auto p-8">
+                   
+                    <form onSubmit={handleSubmit(onSubmit)} className="border p-8">
+                        <div className="flex">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text text-white"> Name*</span>
+                                </label>
+                                <input type="text" placeholder="Name"
+                                    {...register('name', { required: true })} className="input input-bordered w-full" />
+
+                                <div className="form-control mt-2">
+                                    <label className="label">
+                                        <span className="label-text text-white">Price*</span>
+                                    </label>
+                                    <input type="number" placeholder="Price"
+                                        {...register('price', { required: true })} className="input input-bordered w-full" />
+                                </div>
+                            </div>
+
                         </div>
-                        <div className="form-control w-full my-6 ml-6">
+
+                        <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Price*</span>
+                                <span className="">Description</span>
                             </label>
-                            <input type="number" placeholder="Price"
-                                {...register('price', { required: true })} className="input input-bordered w-full" />
+                            <textarea {...register('description')} className="textarea w-[320px]" placeholder="Description"></textarea>
                         </div>
-                    </div>
+                        <div className="form-control mt-4">
+                            <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                        </div>
+                        <div className="mt-4">
+                            For More: <a href="https://themeforest.net/search/educational">http://themeforest.com</a>
 
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Description</span>
-                        </label>
-                        <textarea {...register('description')} className="textarea textarea-bordered h-24" placeholder="Description"></textarea>
-                    </div>
-                    <div className="form-control w-full my-6">
-                        <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
-                    </div>
-                    <div>
-                        For More: <a href="https://themeforest.net/search/educational">http://themeforest.com</a>
+                        </div>
+                        <button className="btn mt-4">
+                            Add Product
+                        </button>
 
-                    </div>
-                    <button className="btn mt-4">
-                        Add Product
-                    </button>
-
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     );

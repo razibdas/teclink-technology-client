@@ -83,27 +83,27 @@ const CheckoutForm = () => {
     }
 
     return (
-        <div className="mt-8 ml-8 mx-12">
-            <form onSubmit={handleSubmit}>
+        <div className="mt-8 ">
+            <form onSubmit={handleSubmit} className="mx-auto text-white p-4 max-w-md border">
                 <CardElement
                     options={{
                         style: {
                             base: {
                                 fontSize: '16px',
-                                color: '#424770',
+                                color: '#fff',
                                 '::placeholder': {
-                                    color: '#aab7c4',
+                                    color: '#fff',
                                 },
                             },
                             invalid: {
-                                color: '#9e2146',
+                                color: '#fff',
                             },
                         },
                     }}
                 />
 
                 <button className="btn mt-8 btn-outline btn-secondary" type="submit" disabled={!stripe || !clientSecret}>
-                    Payment
+                    Pay
                 </button>
                 <p className="text-red-600">{error}</p>
                 {transactionId && <p className="text-green-600">Your transaction id: {transactionId}</p>}

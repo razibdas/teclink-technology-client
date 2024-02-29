@@ -20,7 +20,7 @@ const MyProfile = () => {
                                 tabIndex={0}
                                 className=""
                             >
-                                <div className="rounded-full relative z-50 flex justify-center">
+                                <div className="rounded-full   relative z-50 flex justify-center">
 
                                     <img
                                         className="w-40  -mb-20 h-40 rounded-full"
@@ -30,7 +30,7 @@ const MyProfile = () => {
                                     />
                                 </div>
                                 {/* <div className="artboard  absolute bg-slate-400 phone-1">320×568</div> */}
-                                <div className="artboard rounded-2xl artboard-horizontal phone-3 pt-24 text-2xl justify-center flex" style={{ backgroundImage: `url('https://i.ibb.co/k6N86FX/neom-e-OWabm-CNEdg-unsplash.jpg')` , backgroundSize: 'cover' }}>
+                                <div className="artboard  rounded-2xl artboard-horizontal phone-3 pt-24 text-2xl justify-center flex" style={{ backgroundImage: `url('https://i.ibb.co/k6N86FX/neom-e-OWabm-CNEdg-unsplash.jpg')` , backgroundSize: 'cover' }}>
                                     {user && <p>{user?.displayName}</p>}
                                 </div>
 

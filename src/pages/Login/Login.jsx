@@ -7,6 +7,7 @@ import Swal from 'sweetalert2'
 
 import { AuthContext } from '../../provider/AuthProvider';
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
+import { FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
 
@@ -62,7 +63,7 @@ const Login = () => {
 
     return (
         <>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className=" w-1/2 mr-12 ">
                         <img className='lg:w-[500px] lg:h-[400px]' src="https://i.ibb.co/Cs54KyC/secure-login.gif" alt="" />
@@ -90,7 +91,7 @@ const Login = () => {
                                 <input className="btn btn-primary" type="submit" value="Login" />
                             </div>
                             <div className="text-center mt-2">
-                                <button onClick={handleGoogleSignIn} className="btn btn-secondary text-white">Google Login</button>
+                                <button onClick={handleGoogleSignIn} className="btn btn-secondary text-white">Google Login <FaGoogle></FaGoogle></button>
                             </div>
                         </form>
                         <p className="text-center pb-4">Do not  have an account? <Link className="text-blue-600 font-bold" to="/signup">Sign Up</Link></p>

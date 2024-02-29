@@ -4,6 +4,8 @@ import { CgProfile } from "react-icons/cg";
 import useAdmin from "../Hooks/useAdmin";
 import useModerator from "../Hooks/useModerator";
 
+import  './Main.css'
+
 
 const Dashboard = () => {
 
@@ -11,9 +13,9 @@ const Dashboard = () => {
     const [isModerator] = useModerator();
 
     return (
-        <div className="flex">
-            <div className="w-64 min-h-screen bg-gray-200">
-                <ul className="menu p-4">
+        <div className="flex main-container text-white">
+            <div className="w-64 min-h-screen ">
+                <ul className="menu p-4 ">
                     {
                         isAdmin ? <>
                             <li>
@@ -55,7 +57,7 @@ const Dashboard = () => {
                     </li>
                 </ul>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 border-l-2 border-white ">
                 <Outlet></Outlet>
             </div>
         </div>
