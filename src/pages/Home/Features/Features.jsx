@@ -7,7 +7,7 @@ import { AuthContext } from '../../../provider/AuthProvider';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import useCart from '../../../Hooks/useCart';
-import './style.css';
+// import './style.css';
 
 const Features = ({ feature }) => {
 
@@ -71,41 +71,21 @@ const Features = ({ feature }) => {
     };
 
     return (
-        <motion.div
-            className="card card-compact bg-base-100 shadow-xl"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-        >
-            <figure>
-                <img src={image} alt="Shoes" />
-            </figure>
-            <div className="card-body">
+        <div className="card card-compact bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            <figure><img src={image} alt="Shoes" /></figure>
+            <div className="card-body  " >
                 <Link to={`/feature/${_id}`}>
                     <h2 className="card-title">{name}</h2>
                     <p>Price: ${price}</p>
                 </Link>
                 <div>
-                    <button className="btn btn-outline btn-accent" onClick={toggleDetails}>
-                        {showDetails ? 'Hide Details' : 'Show Details'}
-                    </button>
+                    <button className="btn btn-outline btn-accent">Upvote</button>
                 </div>
-                <AnimatePresence>
-                    {showDetails && (
-                        <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                        >
-                        </motion.div>
-                    )}
-                </AnimatePresence>
                 <div className="card-actions w-full">
-                    <button onClick={() => handleAddToCart(feature)} className="btn my-button w-full">
-                        Add Product
-                    </button>
+                    <button onClick={() => handleAddToCart(feature)} className="btn my-button w-full">Add Product</button>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 
@@ -113,22 +93,7 @@ export default Features;
 
 
 
-{/* <div className="card card-compact bg-base-100 shadow-xl ">
-    <figure><img src={image} alt="Shoes" /></figure>
-    <div className="card-body">
-        <Link to={`/feature/${_id}`}>
-            <h2 className="card-title">{name}</h2>
-            <p>Price: ${price}</p>
-        </Link>
-        <div>
-            <button className="btn btn-outline btn-accent">Upvote</button>
-        </div>
-        <div className="card-actions w-full">
-            <button onClick={() => handleAddToCart(feature)}
-                className="btn my-button w-full ">Add Product</button>
-        </div>
-    </div>
-</div> */}
+ 
 
 
 

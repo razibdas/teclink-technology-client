@@ -20,6 +20,7 @@ import UpdateProduct from "../pages/Dashboard/UpdateProduct/UpdateProduct";
 import Payment from "../pages/Dashboard/Payment/Payment";
 import MyProfile from "../pages/Dashboard/MyProfile/MyProfile";
 import Map from "../pages/Map/Map";
+import CouponFunction from "../pages/CouponFunction/CouponFunction";
 
 
   export const router = createBrowserRouter([
@@ -98,6 +99,10 @@ import Map from "../pages/Map/Map";
         {
           path: 'users',
           element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+        },
+        {
+          path: 'coupon',
+          element: <AdminRoute><CouponFunction></CouponFunction></AdminRoute>
         },
        
       ]

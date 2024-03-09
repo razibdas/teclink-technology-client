@@ -4,7 +4,7 @@ import { CgProfile } from "react-icons/cg";
 import useAdmin from "../Hooks/useAdmin";
 import useModerator from "../Hooks/useModerator";
 
-import  './Main.css'
+// import  './Main.css'
 
 
 const Dashboard = () => {
@@ -13,7 +13,7 @@ const Dashboard = () => {
     const [isModerator] = useModerator();
 
     return (
-        <div className="flex main-container text-white">
+        <div className="flex">
             <div className="w-64 min-h-screen ">
                 <ul className="menu p-4 ">
                     {
@@ -25,7 +25,7 @@ const Dashboard = () => {
                                 <NavLink to="/dashboard/users"> <FaShoppingCart></FaShoppingCart>Manage Users</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/addProduct"> <FaCartArrowDown />Manage Coupons</NavLink>
+                                <NavLink to="/dashboard/coupon"> <FaCartArrowDown />Manage Coupons</NavLink>
                             </li>
                         </>
                             : isModerator ? <> <li>
@@ -57,7 +57,7 @@ const Dashboard = () => {
                     </li>
                 </ul>
             </div>
-            <div className="flex-1 border-l-2 border-white ">
+            <div className="flex-1 border-l-2 border-black ">
                 <Outlet></Outlet>
             </div>
         </div>
