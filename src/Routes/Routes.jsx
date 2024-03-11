@@ -21,6 +21,8 @@ import Payment from "../pages/Dashboard/Payment/Payment";
 import MyProfile from "../pages/Dashboard/MyProfile/MyProfile";
 import Map from "../pages/Map/Map";
 import CouponFunction from "../pages/CouponFunction/CouponFunction";
+import ManageCoupon from "../pages/ManageCoupon/ManageCoupon";
+import EditeCoupon from "../pages/ManageCoupon/EditeCoupon";
 
 
   export const router = createBrowserRouter([
@@ -103,6 +105,14 @@ import CouponFunction from "../pages/CouponFunction/CouponFunction";
         {
           path: 'coupon',
           element: <AdminRoute><CouponFunction></CouponFunction></AdminRoute>
+        },
+        {
+          path: 'manage-coupon',
+          element: <AdminRoute><ManageCoupon></ManageCoupon></AdminRoute>
+        },
+        {
+          path: 'edite/:id',
+          element: <AdminRoute><EditeCoupon></EditeCoupon></AdminRoute>
         },
        
       ]

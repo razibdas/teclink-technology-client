@@ -38,12 +38,13 @@ const CouponFunction = () => {
     };
 
     return (
-        <div className='bg-slate-400'>
+        <div className=''>
             <div className=' flex justify-center  mx-auto p-8'>
-                <form className="border p-8" onSubmit={handleSubmit(onSubmit)}>
+                <form className="border p-8 bg-slate-400" onSubmit={handleSubmit(onSubmit)}>
                     <div className='space-y-4'>
                         <div>
                             <label>Coupon Code</label>
+                            
                             <input {...register('couponCode')} type="text" required />
                         </div>
                         <div>
@@ -58,7 +59,7 @@ const CouponFunction = () => {
                             <label>Discount Amount</label>
                             <input {...register('discountAmount')} type="number" step="0.01" required />
                         </div>
-                        <button type="submit">Add Coupon</button>
+                        <button className='btn' type="submit">Add Coupon</button>
                     </div>
                 </form>
             </div>

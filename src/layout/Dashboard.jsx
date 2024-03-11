@@ -25,7 +25,10 @@ const Dashboard = () => {
                                 <NavLink to="/dashboard/users"> <FaShoppingCart></FaShoppingCart>Manage Users</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/dashboard/coupon"> <FaCartArrowDown />Manage Coupons</NavLink>
+                                <NavLink to="/dashboard/coupon"> <FaCartArrowDown />Add Coupons</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dashboard/manage-coupon"> <FaCartArrowDown />Manage Coupons</NavLink>
                             </li>
                         </>
                             : isModerator ? <> <li>

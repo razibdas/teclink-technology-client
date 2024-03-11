@@ -72,7 +72,7 @@ const Features = ({ feature }) => {
 
     return (
         <div className="card card-compact bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-            <figure><img src={image} alt="Shoes" /></figure>
+            <figure><img  src={image} alt="Shoes" /></figure>
             <div className="card-body  " >
                 <Link to={`/feature/${_id}`}>
                     <h2 className="card-title">{name}</h2>
