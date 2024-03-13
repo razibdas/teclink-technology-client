@@ -59,12 +59,12 @@ const Banner = () => {
                         <div className="hero min-h-screen" style={{ backgroundImage: `url(${imageUrl})` }}>
                             <div className="hero-overlay bg-opacity-60"></div>
                             <div className="hero-content text-center ">
-                                <div className="px-20 py-10 shadow-lg shadow-black" style={{
-                                    backgroundImage: `url(${imageUrl})`,
+                                <div className="px-20 py-10 " style={{
+                                    // backgroundImage: `url(${imageUrl})`,
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat',
                                 }}>
-                                    <h1 className="mb-5  text-white headtext__cormorant" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
+                                    {/* <h1 className="mb-5  text-white headtext__cormorant" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
                                         Explore , <span className='text-5xl font-extrabold'>the World of Learning</span>
                                     </h1>
                                     <p className="mb-5  p__cormorant text-white " style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>Discover the magic of diverse celebrations at Aroa Cultural Events Planner. We blend traditions and unity to create unforgettable cultural experiences.</p>
@@ -73,7 +73,7 @@ const Banner = () => {
                                     </Link>
                                     <Link to='/login'>
                                         <button className="border border-[#0F0F0F] btn-style px-8 py-2 m-2 font-bold rounded-full hover:bg-gradient-to-r from-[#DCCA87] from-10% to-[#0F0F0F] to-90% ">Get Started</button>
-                                    </Link>
+                                    </Link> */}
                                 </div>
                             </div>
                         </div>

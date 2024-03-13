@@ -76,7 +76,7 @@ const ManageCoupon = () => {
 
     return (
         <div>
-            <EditeCoupon isOpen={isOpen} setIsOpen={setIsOpen}  selectedCoupon={selectedCoupon}></EditeCoupon>
+            <EditeCoupon coupon={selectedCoupon} refetch={refetch} isOpen={isOpen} setIsOpen={setIsOpen}  selectedCoupon={selectedCoupon}></EditeCoupon>
             <div className="overflow-x-auto">
                 <table className="table">
                     <thead>
@@ -115,8 +115,6 @@ const ManageCoupon = () => {
 
 export default ManageCoupon;
 
-
-// import { useContext, useState } from 'react';
 // import Swal from 'sweetalert2';
 // import { AuthContext } from '../../provider/AuthProvider';
 // import { useQuery } from '@tanstack/react-query';
