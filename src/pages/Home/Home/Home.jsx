@@ -3,6 +3,7 @@ import Banner from "../Banner/Banner";
 import Features from "../Features/Features";
 import Element from "../../Element/Element";
 import Timeline from "../Timeline/Timeline";
+import CouponShow from "../CouponShow/CouponShow";
 
 
 
@@ -20,6 +21,7 @@ const Home = () => {
                 }
             </div>
             <Element></Element>
+            <CouponShow></CouponShow>
             <Timeline></Timeline>
         </div>
     );

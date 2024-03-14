@@ -49,12 +49,40 @@ const AddProduct = () => {
     return (
         <div className="pt-24">
 
+
             <div className="">
-            <h2 className="text-3xl mx-auto flex justify-center">Add An Product</h2>
+
+
+                <h2 className="text-3xl mx-auto flex justify-center">Add An Product</h2>
+
                 <div className="flex justify-center  mx-auto p-8">
-                   
+
                     <form onSubmit={handleSubmit(onSubmit)} className="border p-8">
-                        <div className="flex">
+                        <div className="">
+                            <div className=" ">
+                                <div className=" ">
+                                    {user && (
+                                        <div className="">
+                                            <label tabIndex={0} className="">
+                                                <div className="rounded-full ">
+                                                    <img
+                                                        className="w-40 -mb-20 h-40 rounded-full"
+                                                        src={user?.photoURL}
+                                                        alt="User Profile"
+                                                    />
+                                                </div>
+
+
+                                            </label>
+                                            <ul tabIndex={0} className="menu dropdown-content z-[1] p-4 backdrop-brightness-5 rounded-box w-40 mt-4">
+                                                {/* Add other menu items or actions */}
+                                            </ul>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex mt-4">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text text-white"> Name*</span>
