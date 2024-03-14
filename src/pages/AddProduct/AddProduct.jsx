@@ -47,7 +47,7 @@ const AddProduct = () => {
     }
 
     return (
-        <div className="pt-24">
+        <div className="pt-24 ">
 
 
             <div className="">
@@ -55,9 +55,9 @@ const AddProduct = () => {
 
                 <h2 className="text-3xl mx-auto flex justify-center">Add An Product</h2>
 
-                <div className="flex justify-center  mx-auto p-8">
+                <div className="flex justify-center   mx-auto p-8">
 
-                    <form onSubmit={handleSubmit(onSubmit)} className="border p-8">
+                    <form onSubmit={handleSubmit(onSubmit)} className="border p-8 bg-zinc-300">
                         <div className="">
                             <div className=" ">
                                 <div className=" ">
@@ -66,14 +66,20 @@ const AddProduct = () => {
                                             <label tabIndex={0} className="">
                                                 <div className="rounded-full ">
                                                     <img
-                                                        className="w-40 -mb-20 h-40 rounded-full"
+                                                        className="w-20 -mb-20 h-20 rounded-full"
                                                         src={user?.photoURL}
                                                         alt="User Profile"
+
                                                     />
+
                                                 </div>
 
-
                                             </label>
+                                            <div className="ml-24">
+                                                {user?.displayName}
+                                                <br />
+                                                {user?.email}
+                                            </div>
                                             <ul tabIndex={0} className="menu dropdown-content z-[1] p-4 backdrop-brightness-5 rounded-box w-40 mt-4">
                                                 {/* Add other menu items or actions */}
                                             </ul>
@@ -82,41 +88,43 @@ const AddProduct = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex mt-4">
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-white"> Name*</span>
-                                </label>
-                                <input type="text" placeholder="Name"
-                                    {...register('name', { required: true })} className="input input-bordered w-full" />
-
-                                <div className="form-control mt-2">
+                        <div className="space-y-4">
+                            <div className="flex mt-4 ">
+                                <div className="form-control ">
                                     <label className="label">
-                                        <span className="label-text text-white">Price*</span>
+                                        <span className="label-text"> Name*</span>
                                     </label>
-                                    <input type="number" placeholder="Price"
-                                        {...register('price', { required: true })} className="input input-bordered w-full" />
+                                    <input type="text" placeholder="Name"
+                                        {...register('name', { required: true })} className="input input-bordered w-full" />
+
+                                    <div className="form-control mt-2">
+                                        <label className="label">
+                                            <span className="label-text ">Price*</span>
+                                        </label>
+                                        <input type="number" placeholder="Price"
+                                            {...register('price', { required: true })} className="input input-bordered w-full" />
+                                    </div>
                                 </div>
+
                             </div>
 
-                        </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="">Description</span>
+                                </label>
+                                <textarea {...register('description')} className="textarea border-slate-950 w-[320px]" placeholder="Description"></textarea>
+                            </div>
+                            <div className="form-control mt-4">
+                                <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
+                            </div>
+                            <div className="mt-4">
+                                For More: <a href="https://themeforest.net/search/educational">http://themeforest.com</a>
 
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="">Description</span>
-                            </label>
-                            <textarea {...register('description')} className="textarea w-[320px]" placeholder="Description"></textarea>
+                            </div>
+                            <button className="btn mt-4">
+                                Add Product
+                            </button>
                         </div>
-                        <div className="form-control mt-4">
-                            <input {...register('image', { required: true })} type="file" className="file-input w-full max-w-xs" />
-                        </div>
-                        <div className="mt-4">
-                            For More: <a href="https://themeforest.net/search/educational">http://themeforest.com</a>
-
-                        </div>
-                        <button className="btn mt-4">
-                            Add Product
-                        </button>
 
                     </form>
                 </div>
