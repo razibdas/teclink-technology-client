@@ -84,7 +84,7 @@ const CheckoutForm = () => {
 
     return (
         <div className="mt-8 ">
-            <form  onSubmit={handleSubmit} className="bg-slate-600 mx-auto text-white p-4 max-w-md border">
+            <form  onSubmit={handleSubmit} className="bg-gray-300 mx-auto text-white p-4 max-w-md border">
                 <CardElement
                     options={{
                         style: {

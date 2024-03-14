@@ -215,8 +215,8 @@ const EditeCoupon = ({refetch,  isOpen, setIsOpen, selectedCoupon }) => {
                                         <form onSubmit={handleSubmit(onSubmit)} className="">
                                             <div className="space-y-4">
                                                 <div>
-                                                    <label>Coupon Code</label>
-                                                    <input
+                                                    <label>Coupon Code: </label>
+                                                    <input className='ml-2 border-slate-950'
                                                         {...register('couponCode')}
                                                         type="text"
                                                         defaultValue={couponCode}
@@ -224,8 +224,8 @@ const EditeCoupon = ({refetch,  isOpen, setIsOpen, selectedCoupon }) => {
                                                     />
                                                 </div>
                                                 <div>
-                                                    <label>Expiry Date</label>
-                                                    <input
+                                                    <label>Expiry Date:</label>
+                                                    <input className='ml-2'
                                                         {...register('expiryDate')}
                                                         type="date"
                                                         defaultValue={expiryDate}
@@ -233,8 +233,8 @@ const EditeCoupon = ({refetch,  isOpen, setIsOpen, selectedCoupon }) => {
                                                     />
                                                 </div>
                                                 <div>
-                                                    <label>Coupon Description</label>
-                                                    <input
+                                                    <label>Coupon Description:</label>
+                                                    <input className='ml-2'
                                                         {...register('couponDescription')}
                                                         type="text"
                                                         defaultValue={couponDescription}
@@ -242,8 +242,8 @@ const EditeCoupon = ({refetch,  isOpen, setIsOpen, selectedCoupon }) => {
                                                     />
                                                 </div>
                                                 <div>
-                                                    <label>Discount Amount</label>
-                                                    <input
+                                                    <label>Discount Amount:</label>
+                                                    <input className='ml-2'
                                                         {...register('discountAmount')}
                                                         type="number"
                                                         defaultValue={discountAmount}
@@ -256,7 +256,7 @@ const EditeCoupon = ({refetch,  isOpen, setIsOpen, selectedCoupon }) => {
                                                 </button>
                                             </div>
                                         </form>
-                                        <button onClick={closeModal}>Close Modal</button>
+                                        
                                     </div>
                                 </Dialog.Panel>
                             </Transition.Child>
